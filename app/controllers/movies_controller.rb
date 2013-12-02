@@ -1,5 +1,11 @@
 class MoviesController < ApplicationController
-  
+
+  def index
+    @gladiator = "Gladiator"
+    @matilda = "Matilda"
+    @shrek = "Shrek"
+  end
+
   def show_gladiator
     @movie = {
       title: 'Gladiator',
@@ -16,7 +22,16 @@ class MoviesController < ApplicationController
       video_id: 'EVWOQwZENBg',
       description: "Quite the random movie, but a classic for sure!"
     }
-    
+
+  end
+
+  def show_shrek
+    @movie = {
+      title: 'Shrek',
+      subtitle: "People are like Onions.",
+      video_id: "bZhAhuknUho",
+      description: "like onions yo!!"
+    }
   end
 
 end
